@@ -46,12 +46,13 @@ namespace Application.Services
                 return false;
             }
 
-            //existingBuilding.Name = building.Name;
-            //existingBuilding.Address = building.Address;
-            //existingBuilding.CeilingHeight = building.CeilingHeight;
-            //existingBuilding.BuildingClass = building.BuildingClass;
-            //existingBuilding.EntrancesCount = building.EntrancesCount;
-            //existingBuilding.Material = building.Material;
+            existingBuilding.BookingNumber = serviceBooking.BookingNumber;
+            existingBuilding.BookingTime = serviceBooking.BookingTime;
+            existingBuilding.ShceduleTime = serviceBooking.ShceduleTime;
+            existingBuilding.BookedPlaceName = serviceBooking.BookedPlaceName;
+            existingBuilding.Status = serviceBooking.Status;
+           
+
 
             return await _serviceBookingRepository.UpdateAsync(existingBuilding, token);
         }
