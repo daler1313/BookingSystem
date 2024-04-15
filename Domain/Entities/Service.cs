@@ -15,7 +15,7 @@ namespace Domain.Entity
         public string Description { get; set; }
         public float Price { get; set; }
         public Status Status { get; set; }
-        public virtual ICollection<ServiceBooking> ServiceDetails { get; set; }
+        public virtual ICollection<ServiceBooking> ServiceBookings { get; set; }
         
 
 

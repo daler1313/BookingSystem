@@ -12,6 +12,6 @@ namespace Domain.Entity
         public string UserName { get; set; }
         public string PhoneNumber { get; set; }
         public string EmaiAddress{ get; set; }
-        public virtual ICollection<ServiceBooking> ServiceDetails { get; set; } 
+        public virtual ICollection<ServiceBooking> ServiceBookings { get; set; } 
     }
 }
