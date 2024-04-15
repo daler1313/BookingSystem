@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Domain.Entity;
+using Domain.Interfaces.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,9 +32,9 @@ namespace Application.Services
             return await _serviceBookingRepository.GetAllAsync(token);
         }
 
-        public async Task<ServiceBooking> GetAsync(Guid id, CancellationToken token = default)
+        public async Task<ServiceBooking> GetAsync(int  Id, CancellationToken token = default)
         {
-            return await _serviceBookingRepository.GetAsync(id, token);
+            return await _serviceBookingRepository.GetAsync(Id, token);
         }
 
         public async Task<bool> UpdateAsync(ServiceBooking serviceBooking, CancellationToken token = default)
