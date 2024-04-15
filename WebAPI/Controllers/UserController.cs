@@ -1,8 +1,11 @@
-﻿using AutoMapper;
+﻿using Application.Services;
+using Application.Common.Mapping;
+using AutoMapper;
 using Contracts.Requests;
-using Microsoft.AspNetCore.Http;
+using Contracts.Responses;
+using Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
-using Application.Services;
+using Domain.Entity;
 
 namespace WebAPI.Controllers
 {
@@ -11,12 +14,19 @@ namespace WebAPI.Controllers
     public class UserController : ControllerBase
     {
         private readonly UserService _service;
-        /*[HttpPost]
-        public Task<IActionResult> Create([FromBody] CreateUserRequest request, CancellationToken token)
+        private IMapper _mapper;
+
+        public UserController(UserService service, IMapper mapper)
         {
-            await _service.CreateAsync(mapper.Map<Instructor>(request), token);
+            _service = service;
+            _mapper = mapper;
+        }
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] CreateUserRequest request, CancellationToken token)
+        {
+            await _service.CreateAsync(_mapper.Map<User>(request), token);
 
             return Ok();
-        }*/
+        }
     }
 }
