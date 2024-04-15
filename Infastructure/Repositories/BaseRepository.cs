@@ -36,7 +36,7 @@ namespace Infrastructure.Repositories
             return await _dbSet.ToListAsync(token);
         }
 
-        public async Task<TEntity> GetAsync(Guid id, CancellationToken token = default)
+        public async Task<TEntity> GetAsync(int id, CancellationToken token = default)
         {
             return await _dbSet.FindAsync(id, token);
         }
