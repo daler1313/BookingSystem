@@ -14,6 +14,6 @@ namespace Domain.Entities
         public string DetailValue { get; set; }
         public Status status { get; set; }
         public Service Services { get; set; }
-        public int ServiceIdn { get; set; }
+        public int ServiceId { get; set; }
     }
 }

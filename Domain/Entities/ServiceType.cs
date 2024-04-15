@@ -12,7 +12,7 @@ namespace Domain.Entities
     {
         public string Name { get; set; }
         public Status Status { get; set; }
-        public virtual ICollection<ServiceTypeDetails> ServiceDetails { get; set; }
+        public virtual ICollection<ServiceTypeDetails> ServiceTypeDetails { get; set; }
 
     }
 }
