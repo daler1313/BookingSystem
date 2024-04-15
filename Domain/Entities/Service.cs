@@ -1,4 +1,5 @@
-﻿using Domain.Enum;
+﻿using Domain.Entities;
+using Domain.Enum;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,8 @@ namespace Domain.Entity
         public string Description { get; set; }
         public float Price { get; set; }
         public Status Status { get; set; }
-        public virtual ICollection<ServiceDetails> ServiceDetails { get; set; }
+        public virtual ICollection<ServiceBooking> ServiceDetails { get; set; }
+        
 
 
     }
