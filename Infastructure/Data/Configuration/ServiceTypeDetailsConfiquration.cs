@@ -18,7 +18,7 @@ namespace Infastructure.Data.Configuration
             builder.Property(d => d.DetailName)
                 .IsRequired();
             builder.Property(d => d.DetailType)
-             .IsRequired();
+             .IsRequired();     
 
             builder.HasOne(d =>d .ServiceTypes)
                 .WithMany(s => s.ServiceTypeDetails)
